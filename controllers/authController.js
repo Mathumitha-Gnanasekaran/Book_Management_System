@@ -8,10 +8,6 @@ exports.register = async (req, res) => {
   try {
     const { username, password, role } = req.body;
 
-    if (!username || !password || !role) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
-
     const existingUser = await User.findOne({ where: { username } });
     if (existingUser) {
       return res.status(400).json({ message: "Username already exists" });
@@ -44,12 +40,6 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
-
-    if (!username || !password) {
-      return res
-        .status(400)
-        .json({ message: "Username and password are required" });
-    }
 
     const user = await User.findOne({ where: { username } });
     if (!user) {

@@ -7,7 +7,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const authRoutes = require('./routes/authRoutes');
+const bookRoutes = require('./routes/bookRoutes');
 
 app.use('/api/auth', authRoutes);
+app.use('/api/book', bookRoutes);
 
 module.exports = app;

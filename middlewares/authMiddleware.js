@@ -24,7 +24,7 @@ exports.authorizeRole = (role) => {
     if (req.user.role !== role) {
       return res
         .status(403)
-        .json({ message: "Forbidden: Insufficient privileges" });
+        .json({ message: "Warning: This user don't have access" });
     }
     next();
   };
