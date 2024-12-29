@@ -36,13 +36,13 @@ The **Book Management System** is a RESTful API built with Node.js, Express, and
 
    cd Book_Management_System
 
-   Install the dependencies: ```bash npm install
+   Install the dependencies: npm install
 
 ---
 
 ## Running the Server
 
-- Start the server: ```bash npm start
+- Start the server: npm start
 
 - The server will start on port 8080 by default. You can access it at:
 
@@ -56,7 +56,7 @@ http://localhost:8080
 - models/: Contains Sequelize models for Books and Users.
 - routes/: Contains route handlers for books and user authentication.
 - controllers/: Business logic for handling requests and responses.
-- middleware/: Custom middleware for authentication and error handling.
+- middleware/: Custom middleware for authentication.
 
 ---
 
@@ -115,7 +115,6 @@ http://localhost:8080
   "genre": "Fiction",
   "publishedYear": 2024
 }
-
 
 
 **Get All Books**
